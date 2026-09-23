@@ -1,0 +1,8 @@
+requests>=2.31
+PyYAML>=6.0
+# 真实 SHT30 驱动依赖（仅 Raspberry Pi 需要，Windows 开发用模拟器可忽略）：
+smbus2>=0.4.2
+# 真实 DHT11 驱动依赖（仅 Raspberry Pi 需要）：
+# 还需系统包：sudo apt install -y libgpiod2
+adafruit-circuitpython-dht>=3.3.0
+adafruit-blinka>=8.0.0

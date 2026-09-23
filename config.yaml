@@ -1,0 +1,13 @@
+# config.yaml
+sensor:
+  mode: "simulator"   # simulator=模拟器 | real=SHT30(I2C) | dht11=DHT11(单线)
+  sample_interval: 2  # 采样间隔2秒（DHT11 最快 1Hz，建议 ≥2s）
+  # 仅 DHT11 用：数据线接的 GPIO 编号（默认 4 = 物理 pin 7）
+  gpio_pin: 4
+  # 仅 SHT30 用：
+  i2c_bus: 1
+  i2c_addr: 0x44
+
+server:
+  url: "http://127.0.0.1:8000"
+  token: "abc123"     # 和服务端main.py里校验的token保持一致

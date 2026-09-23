@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# 运行时数据（数据库、断网缓冲）——不要传 GitHub
+data/
+*.db
+*.db-*
+*.jsonl
+
+# IDE / 编辑器
+.idea/
+.vscode/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>环境温湿度监测 · PiHumMonitor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>环境温湿度监测</h1>
+    <span id="status" class="status">连接中…</span>
+  </header>
+
+  <section class="cards">
+    <div class="card">
+      <div class="label">温度</div>
+      <div class="value"><span id="temp">--</span><span class="unit">°C</span></div>
+    </div>
+    <div class="card">
+      <div class="label">湿度</div>
+      <div class="value"><span id="hum">--</span><span class="unit">%RH</span></div>
+    </div>
+    <div class="card">
+      <div class="label">更新时间</div>
+      <div class="value small" id="updated">--</div>
+    </div>
+  </section>
+
+  <section class="chart-box">
+    <div class="chart-head">
+      <h2>历史趋势</h2>
+      <div class="ranges">
+        <button data-range="1h">1 小时</button>
+        <button data-range="6h">6 小时</button>
+        <button data-range="24h" class="active">24 小时</button>
+        <button data-range="7d">7 天</button>
+      </div>
+    </div>
+    <canvas id="chart"></canvas>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
